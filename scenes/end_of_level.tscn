@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://boul4m3o6dy4q"]
+
+[ext_resource type="Script" uid="uid://c1sr2n0vghtoc" path="res://scripts/end_of_level.gd" id="1_grefp"]
+
+[node name="EndOfLevel" type="Area2D"]
+collision_mask = 3
+script = ExtResource("1_grefp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3wbsecmobh46"]
+
+[ext_resource type="FontFile" uid="uid://d4eslfftyyrjy" path="res://assets/fonts/PixelOperator8.ttf" id="1_efmwq"]
+[ext_resource type="Script" uid="uid://cylcw175w3c6o" path="res://scripts/gui.gd" id="1_mfius"]
+
+[node name="GUI" type="CanvasLayer"]
+script = ExtResource("1_mfius")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 17.0
+offset_top = 32.0
+offset_right = 119.0
+offset_bottom = 55.0
+scale = Vector2(1.80529, 1.76788)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_efmwq")
+text = "score: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
