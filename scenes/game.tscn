@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://cs6qpl7p4nxxk"]
+[gd_scene load_steps=21 format=4 uid="uid://cs6qpl7p4nxxk"]
 
 [ext_resource type="PackedScene" uid="uid://jqvpar7cvr51" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://dj3i54n325uki" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
@@ -354,6 +354,8 @@ normal = Vector2(0, 1)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u5sy4"]
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_0tnpc"]
+
 [node name="Game" type="Node2D"]
 
 [node name="Layers" type="Node" parent="."]
@@ -475,8 +477,41 @@ rotation = -1.56829
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Limits/EndOfLevel"]
 shape = SubResource("WorldBoundaryShape2D_u5sy4")
 
-[node name="Slime" parent="Limits" instance=ExtResource("7_u5sy4")]
-position = Vector2(374, 132)
+[node name="LimitSlime1" type="Area2D" parent="Limits"]
+position = Vector2(431, 133)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limits/LimitSlime1"]
+shape = SubResource("SegmentShape2D_0tnpc")
+
+[node name="LimitSlime2" type="Area2D" parent="Limits"]
+position = Vector2(447, 101)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limits/LimitSlime2"]
+shape = SubResource("SegmentShape2D_0tnpc")
+
+[node name="LimitSlime3" type="Area2D" parent="Limits"]
+position = Vector2(480, 6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limits/LimitSlime3"]
+shape = SubResource("SegmentShape2D_0tnpc")
+
+[node name="LimitSlime4" type="Area2D" parent="Limits"]
+position = Vector2(736, 7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limits/LimitSlime4"]
+shape = SubResource("SegmentShape2D_0tnpc")
+
+[node name="LimitSlime5" type="Area2D" parent="Limits"]
+position = Vector2(784, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limits/LimitSlime5"]
+shape = SubResource("SegmentShape2D_0tnpc")
+
+[node name="LimitSlime6" type="Area2D" parent="Limits"]
+position = Vector2(864, 6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limits/LimitSlime6"]
+shape = SubResource("SegmentShape2D_0tnpc")
 
 [node name="Labels" type="Node" parent="."]
 
@@ -509,3 +544,32 @@ theme_override_colors/font_color = Color(0.0784314, 0.596078, 0.862745, 1)
 theme_override_fonts/font = ExtResource("8_gee14")
 theme_override_font_sizes/font_size = 8
 text = "Falling is hard..."
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Slime" parent="Enemies" instance=ExtResource("7_u5sy4")]
+position = Vector2(374, 132)
+
+[node name="Slime2" parent="Enemies" instance=ExtResource("7_u5sy4")]
+position = Vector2(468, 100)
+
+[node name="Slime3" parent="Enemies" instance=ExtResource("7_u5sy4")]
+position = Vector2(510, 4)
+
+[node name="Slime4" parent="Enemies" instance=ExtResource("7_u5sy4")]
+position = Vector2(719, 4)
+
+[node name="Slime5" parent="Enemies" instance=ExtResource("7_u5sy4")]
+position = Vector2(680, 4)
+
+[node name="Slime6" parent="Enemies" instance=ExtResource("7_u5sy4")]
+position = Vector2(727, 4)
+
+[node name="Slime7" parent="Enemies" instance=ExtResource("7_u5sy4")]
+position = Vector2(605, 6)
+
+[node name="Slime8" parent="Enemies" instance=ExtResource("7_u5sy4")]
+position = Vector2(803, 4)
+
+[node name="Slime9" parent="Enemies" instance=ExtResource("7_u5sy4")]
+position = Vector2(803, 4)

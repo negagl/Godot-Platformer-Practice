@@ -44,6 +44,7 @@ animations = [{
 size = Vector2(10, 14)
 
 [node name="Slime" type="Node2D"]
+top_level = true
 script = ExtResource("1_n6pvg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -61,7 +62,9 @@ shape = SubResource("RectangleShape2D_0l8pv")
 [node name="RayCastRight" type="RayCast2D" parent="."]
 position = Vector2(0, 5)
 target_position = Vector2(8, 0)
+collide_with_areas = true
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 position = Vector2(0, 5)
 target_position = Vector2(-8, 0)
+collide_with_areas = true
