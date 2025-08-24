@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3wbsecmobh46"]
+[gd_scene load_steps=4 format=3 uid="uid://d3wbsecmobh46"]
 
 [ext_resource type="FontFile" uid="uid://d4eslfftyyrjy" path="res://assets/fonts/PixelOperator8.ttf" id="1_efmwq"]
 [ext_resource type="Script" uid="uid://cylcw175w3c6o" path="res://scripts/gui.gd" id="1_mfius"]
+[ext_resource type="FontFile" uid="uid://4tbgye1vke65" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_ynd5l"]
 
 [node name="GUI" type="CanvasLayer"]
 script = ExtResource("1_mfius")
@@ -14,6 +15,95 @@ offset_bottom = 55.0
 scale = Vector2(1.80529, 1.76788)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_efmwq")
-text = "score: 0"
+text = "Puntaje: "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Puntaje" type="Label" parent="."]
+offset_left = 141.0
+offset_top = 33.0
+offset_right = 243.0
+offset_bottom = 56.0
+scale = Vector2(1.80529, 1.76788)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_efmwq")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Final Score Label" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Final Score Label"]
+offset_left = 370.0
+offset_top = 251.0
+offset_right = 777.0
+offset_bottom = 401.0
+
+[node name="Game Finished2" type="Label" parent="Final Score Label"]
+offset_left = 376.0
+offset_top = 283.0
+offset_right = 802.0
+offset_bottom = 330.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ynd5l")
+theme_override_font_sizes/font_size = 46
+text = "¡GANASTE!"
+
+[node name="Game Finished" type="Label" parent="Final Score Label"]
+offset_left = 373.0
+offset_top = 276.0
+offset_right = 799.0
+offset_bottom = 323.0
+theme_override_colors/font_color = Color(0.845824, 0.725212, 0, 1)
+theme_override_fonts/font = ExtResource("3_ynd5l")
+theme_override_font_sizes/font_size = 46
+text = "¡GANASTE!"
+
+[node name="Game Finished4" type="Label" parent="Final Score Label"]
+offset_left = 405.0
+offset_top = 347.0
+offset_right = 909.0
+offset_bottom = 379.0
+scale = Vector2(0.545382, 0.924176)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ynd5l")
+theme_override_font_sizes/font_size = 32
+text = "PUNTUACION FINAL:"
+
+[node name="Game Finished3" type="Label" parent="Final Score Label"]
+offset_left = 403.0
+offset_top = 345.0
+offset_right = 907.0
+offset_bottom = 377.0
+scale = Vector2(0.545382, 0.924176)
+theme_override_colors/font_color = Color(0.574098, 0.997998, 0.943672, 1)
+theme_override_fonts/font = ExtResource("3_ynd5l")
+theme_override_font_sizes/font_size = 32
+text = "PUNTUACION FINAL:"
+
+[node name="Game Finished6" type="Label" parent="Final Score Label"]
+offset_left = 713.0
+offset_top = 345.0
+offset_right = 790.0
+offset_bottom = 377.0
+scale = Vector2(0.545382, 0.924176)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ynd5l")
+theme_override_font_sizes/font_size = 32
+text = "0"
+
+[node name="Game Finished5" type="Label" parent="Final Score Label"]
+offset_left = 711.0
+offset_top = 343.0
+offset_right = 788.0
+offset_bottom = 375.0
+scale = Vector2(0.545382, 0.924176)
+theme_override_colors/font_color = Color(0.574098, 0.997998, 0.943672, 1)
+theme_override_fonts/font = ExtResource("3_ynd5l")
+theme_override_font_sizes/font_size = 32
+text = "0"
