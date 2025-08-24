@@ -208,7 +208,6 @@ autoplay = "default"
 frame_progress = 0.887619
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource("CircleShape2D_ssuvv")
 
 [node name="PickUpSound" type="AudioStreamPlayer2D" parent="."]
